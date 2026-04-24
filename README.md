@@ -108,17 +108,6 @@ python3 pox.py log.level --DEBUG controller
 cd ~/sdn_project
 sudo python3 topo.py
 ```
-## iperf Throughput Test
-
-### Allowed Traffic (h1 → h3)
-```bash
-mininet> iperf h1 h3
-```
-### Blocked Traffic (h2 → h4)
-```bash
-mininet> sh timeout 5 iperf -c 10.0.0.4 -t 3
-```
-
 
 ##  Expected Output
 
@@ -141,7 +130,16 @@ mininet> h2 ping -c 4 h4
 ❌ 100% packet loss
 
 ---
+## iperf Throughput Test
 
+### Allowed Traffic (h1 → h3)
+```bash
+mininet> iperf h1 h3
+```
+### Blocked Traffic (h2 → h4)
+```bash
+mininet> sh timeout 5 iperf -c 10.0.0.4 -t 3
+```
 
 Expected:
 
