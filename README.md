@@ -146,6 +146,15 @@ mininet> iperf h1 h3
 ```bash
 mininet> sh timeout 5 iperf -c 10.0.0.4 -t 3
 ```
+### Flow table changes
+
+```bash
+# View flows on switch 1
+mininet> sh ovs-ofctl dump-flows s1
+
+# View flows on switch 2
+mininet> sh ovs-ofctl dump-flows s2
+```
 
 Expected:
 
@@ -174,7 +183,15 @@ Expected:
 5. Test connectivity
    <img width="454" height="131" alt="image" src="https://github.com/user-attachments/assets/907bdf34-7ee8-4086-ad3d-f0674ff0d2e9" />
 
-6. iperf Throughput Test
+
+6. View flow table changes
+    View flows on switch 1
+   <img width="671" height="416" alt="image" src="https://github.com/user-attachments/assets/8b98da68-1c9e-4c69-8952-ba572ce42cb2" />
+
+    View flows on switch 2
+   <img width="675" height="411" alt="image" src="https://github.com/user-attachments/assets/ced09a27-2cd8-4c9d-9bdc-f3160c073623" />
+
+7. iperf Throughput Test
  Allowed Traffic (h1 → h3)
 <img width="499" height="60" alt="image" src="https://github.com/user-attachments/assets/98e40f6d-c118-41b6-915a-ab948970fa70" />
 
