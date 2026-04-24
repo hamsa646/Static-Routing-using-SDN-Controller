@@ -108,24 +108,17 @@ python3 pox.py log.level --DEBUG controller
 cd ~/sdn_project
 sudo python3 topo.py
 ```
-## 📸 iperf Throughput Test
+## iperf Throughput Test
 
 ### Allowed Traffic (h1 → h3)
-![iperf-allowed](screenshots/iperf_allowed.png)
-
+```bash
+mininet> iperf h1 h3
+```
 ### Blocked Traffic (h2 → h4)
-![iperf-blocked](screenshots/iperf_blocked.png)
+```bash
+mininet> sh timeout 5 iperf -c 10.0.0.4 -t 3
+```
 
----
-
-## 📸 Packet Capture (tcpdump / Wireshark)
-
-### Allowed Traffic Capture
-![tcpdump-allowed](screenshots/tcpdump_allowed.png)
-
-### Blocked Traffic Capture
-![tcpdump-blocked](screenshots/tcpdump_blocked.png)
----
 
 ##  Expected Output
 
@@ -168,11 +161,18 @@ Expected:
 <img width="593" height="197" alt="image" src="https://github.com/user-attachments/assets/21a5d4c5-7ccb-4c8c-8de8-787d44e5d246" />
 
 3. Allowed ping (h1 → h3)
-   <img width="620" height="181" alt="Screenshot 2026-04-24 002001" src="https://github.com/user-attachments/assets/84f14014-139a-4517-82ee-6d1dcb9f20d0" />
+  <img width="589" height="160" alt="image" src="https://github.com/user-attachments/assets/1393627b-fdd6-4e3a-b0c1-b493ccbd29f4" />
+
 
 4. Blocked ping (h2 → h4)
-   <img width="617" height="109" alt="Screenshot 2026-04-24 001941" src="https://github.com/user-attachments/assets/52b7e2d0-e3f5-4d16-b362-359ca7d23168" />
+  <img width="595" height="95" alt="image" src="https://github.com/user-attachments/assets/5dce0fdf-3e9d-4f36-9e43-66610eaf4211" />
 
+5. iperf Throughput Test
+ Allowed Traffic (h1 → h3)
+<img width="499" height="60" alt="image" src="https://github.com/user-attachments/assets/98e40f6d-c118-41b6-915a-ab948970fa70" />
+
+Blocked Traffic (h2 → h4)
+<img width="572" height="123" alt="image" src="https://github.com/user-attachments/assets/b4224527-330e-44a4-a9fa-e6929ff6e4ec" />
 
     
 ## Conclusion
