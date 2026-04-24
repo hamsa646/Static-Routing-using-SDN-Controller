@@ -130,6 +130,12 @@ mininet> h2 ping -c 4 h4
 ❌ 100% packet loss
 
 ---
+
+## Test connectivity
+```bash
+mininet> pingall
+```
+
 ## iperf Throughput Test
 
 ### Allowed Traffic (h1 → h3)
@@ -165,7 +171,10 @@ Expected:
 4. Blocked ping (h2 → h4)
   <img width="595" height="95" alt="image" src="https://github.com/user-attachments/assets/5dce0fdf-3e9d-4f36-9e43-66610eaf4211" />
 
-5. iperf Throughput Test
+5. Test connectivity
+   <img width="454" height="131" alt="image" src="https://github.com/user-attachments/assets/907bdf34-7ee8-4086-ad3d-f0674ff0d2e9" />
+
+6. iperf Throughput Test
  Allowed Traffic (h1 → h3)
 <img width="499" height="60" alt="image" src="https://github.com/user-attachments/assets/98e40f6d-c118-41b6-915a-ab948970fa70" />
 
